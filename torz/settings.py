@@ -96,6 +96,7 @@ if development_flag:
         'PORT': '5432',
     }
     }
+
 else:
         DATABASES = {
         'default': {
@@ -153,3 +154,7 @@ STATIC_ROOT = os.path.join(PROJECT_DIR, "staticfiles")
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
+
+import dj_database_url
+DATABASES['default'] =  dj_database_url.config()
+
