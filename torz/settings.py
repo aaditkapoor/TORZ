@@ -92,7 +92,7 @@ if development_flag:
         'NAME': 'torz',
         'USER': 'admin',
         'PASSWORD': 'silverjk',
-        'HOST': 'localhost',
+        'HOST': '127.0.0.1',
         'PORT': '5432',
     }
     }
