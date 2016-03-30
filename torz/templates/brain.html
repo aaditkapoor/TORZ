@@ -1,0 +1,105 @@
+<html>
+<head>
+	{% load staticfiles %}
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<script src="{% static "sweetalert.min.js" %}"></script> 
+	<link rel="stylesheet" type="text/css" href="{% static "sweetalert.css" %}">
+	  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+	<title>
+		TORZ
+	</title>
+</head>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<body>
+   <nav>
+    <div class="nav-wrapper blue dark" class="card-panel teal lighten-2">
+      <a href="/" class="brand-logo">TORZ</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/about/">ABOUT</a></li>
+        <li><a href="/working/">HOW IT WORKS?</a></li>
+        <li><a href="/brain/">TORZ'S BRAIN</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+    <div class="row" style="width:1000px; margin:0 auto;">
+        <div class="col s12 m6">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">INTRODUCTION TO BRAIN</span>
+              <center><p>HI! Here you can view TORZ'S BRAIN, all information it has learnt from users, a big collection of latest and finest torrents available on the web submitted by people according to their interests.</p>
+            </div>
+            <div class="card-action">
+              <a href="/">TRY TORZ</a>
+            </div>
+          </div>
+        </div>
+      </div>
+            
+        
+<div class="container">
+<div class="container-full">   
+</p> 
+  </div>
+  <div>
+  <p>
+  <div class = "collection">   
+    {% for i in data %}
+<a class = "collection-item" href = "{{ i }}">{{i}}</a></li>
+{% endfor %}
+</div>
+
+  </p> 
+</div>
+
+
+</p>
+
+
+  </div>
+  
+</div><!-- /.container -->
+        
+</div>
+
+
+
+
+<footer class="page-footer blue-dark">
+          <div class="container blue-dark">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">TORZ</h5>
+                <p class="grey-text text-lighten-4">BRIGHTEN YOUR MINDS WITH TORZ.</p>
+              </div>
+             
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2016 TORZ AUTHORS
+            </div>
+          </div>
+        </footer>
+
+</body>
+</html

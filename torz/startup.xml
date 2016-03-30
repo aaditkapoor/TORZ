@@ -1,0 +1,26 @@
+<aiml version="1.0.1" encoding="UTF-8">
+    <category>
+
+        <pattern>LOAD AIML TORZ</pattern>
+
+        <template>
+            <learn>torz/ai/converse.aiml</learn>
+            <learn>torz/ai/Adverbs.aiml</learn>
+            <learn>torz/ai/Emotion.aiml</learn>
+            <learn>torz/ai/Happy.aiml</learn>
+            <learn>torz/ai/Interjection.aiml</learn>
+            <learn>torz/ai/Knowledge.aiml</learn>
+            <learn>torz/ai/Salutations.aiml</learn>
+            <learn>torz/ai/std-brain.aiml</learn>
+            <learn>torz/ai/std-gender.aiml</learn>
+            <learn>torz/ai/std-hello.aiml</learn>
+            <learn>torz/ai/std-inventions.aiml</learn>
+            <learn>torz/ai/std-robot.aiml</learn>
+            <learn>torz/ai/std-yesno.aiml</learn>
+            <learn>torz/ai/std-turing.aiml</learn>
+            <learn>torz/ai/std-numbers.aiml</learn>
+        </template>
+        
+    </category>
+
+</aiml>
