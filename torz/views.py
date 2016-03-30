@@ -2,7 +2,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render_to_response
 import random
 from .torrentfinder.find import TorrentClass, createClusterOfTorrents
-from .models import TrendingStuff, BrainSystem, TorzBrain
+from .models import TrendingStuff, BrainSystem, TorzBrain, URLClicks
 from .movie import checkMovie
 from .ai.ai import AISystem
 from .responder import Responder
@@ -30,6 +30,36 @@ def add_knowledge(request, info):
 		return HttpResponseRedirect('/')
 	else:
 		return HttpResponse(checkMovie(info))
+
+
+
+def click_counter(request):
+	count = 0
+	url = request.GET.get("url")
+	flag = True
+	print url
+
+	if url:	
+		try:
+			 URLClicks.objects.get(url=url)
+		except:
+			flag = False
+
+		if flag:
+			x = URLClicks.objects.get(url=url)
+			new = int(x.number) + 1
+			URLClicks.objects.update(url=url, number=new)
+			return HttpResponseRedirect(url)
+		else:
+			count+=1
+			URLClicks.objects.create(url = url, number=count)
+			return HttpResponseRedirect(url)
+	else:
+		return HttpResponseRedirect('/')
+
+def best_torrents(request):
+	a = URLClicks.objects.all()
+	return render_to_response("best.html",{"data":a})
 
 
 def populateBrain2(request):

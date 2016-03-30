@@ -14,59 +14,6 @@
 	</title>
 </head>
 
-<script type="text/javascript">
-
-function torzInput() {
-	swal({   title: "What do you like?",   text: "Write a movie name or a tv show or anything related to entertainment",   type: "input",   showCancelButton: true,   closeOnConfirm: false,   animation: "slide-from-top",   inputPlaceholder: "Write something" }, function(inputValue){   if (inputValue === false) return false;      if (inputValue === "") {     swal.showInputError("You need to write something!");     return false   }
-
-
-function about() {
-
-  swal("Welcome to Torz!")
-  return false
-}
-
-
-		window.location = "http://torz.herokuapp.com/add-knowledge/"+inputValue;
-
-
-	 });
-}
-
-
-torzInput();
-
-
-</script>
-
-{% if flag %}
-
-<script type="text/javascript">
-
-
-swal("Good job!", "TORZ LEARNT IT! NEXT TIME YOU WILL SEE YOUR FAVOURITE STUFF.", "success")
-
-
-</script>
-
-
-{% endif %}
-
-<script type="text/javascript">
-
-
-swal("Good job!", "no.", "success")
-
-
-</script>
-
-<style>
-.card .card-content {
-    margin: 0 auto;
-}
-</style>
-
-
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
@@ -107,25 +54,9 @@ swal("Good job!", "no.", "success")
     
     <p class="lead">
 
-
-<div class="container">
-  <div class="jumbotron">
-    <h1><b><i><u>WELCOME!</u></i></b></h1> 
-    <p>TORZ is a system that collects best torrents available on reputed sites and shows it you, it has an Artificial Intelligence System that promotes social share so that you find best and new TV SHOWS.<br><br>
-<a  onclick="torzInput()" class="waves-effect waves-light btn-large" >TEACH TORZ SOMETHING</a><br><br>
-<div class="form-group">
-  <blockquote>
-  <form action="/ask/">
-    <h1><b><i></i></b></h2> <input size="50" placeholder = "ASK ME ANYTHING" type="text" name="query">
-  </form>
-  </blockquote>
-
-</div>
-</div>
-
 <div class = "jumbotron">
 
-<h2><b><i> <u>TORRENTS SORTED BY TORZ</u></b></i></h2>
+<h2><b><i> <u>BEST TORRENTS (RATED BY OUR USERS )</u></b></i></h2>
 <div class="container-full">   
 </p> 
   </div>
@@ -134,11 +65,10 @@ swal("Good job!", "no.", "success")
   {% for i in data %}
 
   <div class="jumbotron">
-  <h3><b>{{ i.query }}</b></h3>
   <p>
     <div class="collection">
-        <h4><a class="collection-item" href="click-counter?url={{i.knowledge}}">{{ i.knowledge }}</a> <br></h4>
-        <a  href="{{ i.knowledge }}" class="waves-effect waves-light btn-large" >OPEN TORRENT</a>
+        <h4><a class="collection-item" href="{{ i.url }}">{{ i.url }}</a> <br></h4>
+        <b><H3>LINK OPENED: </b> <B>{{ i.number }} TIMES</b>
 </div>
 
   </p> 

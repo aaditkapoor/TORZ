@@ -10,17 +10,23 @@ class TrendingStuff(models.Model):
 
 
 class BrainSystem(models.Model):
-	query = models.CharField(default=True,max_length=120)
-	knowledge = models.CharField(max_length=200)
+	query = models.CharField(default=True,max_length=500)
+	knowledge = models.CharField(max_length=1000)
 
 
 	def __unicode__(self):
 		return self.knowledge
 
 class TorzBrain(models.Model):
-	brain = models.CharField(max_length=120)
+	brain = models.CharField(max_length=200)
 
 	def __unicode__(self):
 		return self.brain
 
 
+class URLClicks(models.Model):
+	url = models.CharField(max_length=500)
+	number = models.CharField(default=0, max_length=4)
+
+	def __unicode__(self):
+		return self.url
