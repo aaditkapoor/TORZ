@@ -76,7 +76,7 @@ def search(request):
 		t.build_response()
 		data = t.return_torrents()
 
-		return render_to_response("index.html", {"data":data})
+		return render_to_response("search.html", {"data":data})
 	else:
 		return HttpResponseRedirect("/")
 

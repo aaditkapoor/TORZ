@@ -1,0 +1,168 @@
+<html>
+<head>
+	{% load staticfiles %}
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script src="{% static "sweetalert.min.js" %}"></script> 
+	<link rel="stylesheet" type="text/css" href="{% static "sweetalert.css" %}">
+	  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+	<title>
+		TORZ
+	</title>
+</head>
+
+<script type="text/javascript">
+
+function torzInput() {
+	swal({   title: "What do you like?",   text: "Write a movie name or a tv show or anything related to entertainment",   type: "input",   showCancelButton: true,   closeOnConfirm: false,   animation: "slide-from-top",   inputPlaceholder: "Write something" }, function(inputValue){   if (inputValue === false) return false;      if (inputValue === "") {     swal.showInputError("You need to write something!");     return false   }
+
+
+function about() {
+
+  swal("Welcome to Torz!")
+  return false
+}
+
+
+		window.location = "http://https://torz.herokuapp.com/add-knowledge/"+inputValue;
+
+
+	 });
+}
+
+
+torzInput();
+
+
+</script>
+
+{% if flag %}
+
+<script type="text/javascript">
+
+
+swal("Good job!", "TORZ LEARNT IT! NEXT TIME YOU WILL SEE YOUR FAVOURITE STUFF.", "success")
+
+
+</script>
+
+
+{% endif %}
+
+<script type="text/javascript">
+
+
+swal("Good job!", "no.", "success")
+
+
+</script>
+
+<style>
+.card .card-content {
+    margin: 0 auto;
+}
+</style>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<body>
+   <nav>
+    <div class="nav-wrapper blue dark" class="card-panel teal lighten-2">
+      <a href="/" class="brand-logo">TORZ</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/about/">ABOUT</a></li>
+        <li><a href="/working/">HOW IT WORKS?</a></li>
+        <li><a href="/torz-brain/">TORZ'S BRAIN</a></li>
+      </ul>
+    </div>
+  </nav>
+        
+<div class="container">
+  
+  <div class="text-center">
+    <form action="/ask/">
+    <h1><b><i>ASK TORZ:</i></b></h2> <input size="24" placeholder = "ASK ME ANYTHING" type="text" name="query">
+  </form>
+    <p class="lead">
+
+
+<div class="container">
+  <div class="jumbotron">
+    <h1><b><i><u>WELCOME!</u></i></b></h1> 
+    <p>TORZ is a system that collects best torrents available on reputed sites and shows it you, it has an Artificial Intelligence System that promotes social share so that you find best and new TV SHOWS.<br><br>
+<a  onclick="torzInput()" class="waves-effect waves-light btn-large" >TEACH TORZ SOMETHING</a><br><br>
+<div class="form-group">
+	<form action = "/search/">
+  <input type="text"  name = "search" placeholder="SEARCH FOR A TORRENT"class="form-control" id="usr">
+</form>
+</div>
+</div>
+
+<div class = "jumbotron">
+
+<h2><b><i> <u>TORRENTS SORTED BY TORZ</u></b></i></h2>
+<div class="container-full">   
+</p> 
+  </div>
+  <div>
+  <p>
+  {% for i in data %}
+
+  <div class="collection">
+    <a class = "collection-item" href = " {{ i }}">{{i}}</a>
+  </div>
+
+  {% endfor %}
+
+
+  </p> 
+</div>
+
+
+
+</p>
+
+
+  </div>
+  
+</div><!-- /.container -->
+        
+</div>
+</div>
+
+
+
+
+<footer class="page-footer blue-dark">
+          <div class="container blue-dark">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">TORZ</h5>
+                <p class="grey-text text-lighten-4">BRIGHTEN YOUR MINDS WITH TORZ.</p>
+              </div>
+             
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2016 TORZ AUTHORS
+            </div>
+          </div>
+        </footer>
+
+</body>
+</html
