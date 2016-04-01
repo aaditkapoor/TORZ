@@ -12,7 +12,18 @@ import os
 def populate():
 	t = list(set([i for i in BrainSystem.objects.all()]))
 	random.shuffle(t)
-	return t
+	keys = list(set([i.query for i in BrainSystem.objects.all()]))
+	return keys
+
+
+def view_torrents(request):
+	q = request.GET.get("query","")
+
+	if q:
+		a = BrainSystem.objects.filter(query=q)
+		return render_to_response("view.html",{"data":a})
+
+
 
 def home(request):
 	data = populate()
@@ -92,7 +103,7 @@ def populateBrain(request):
 			x=1
 			for s in t.return_torrents():
 				print ("PUSHED TORRENT URL %d" % x)
-				BrainSystem.objects.create(query=i,knowledge=s)
+				BrainSystem.objects.update(query=i,knowledge=s)
 				x+=1
 
 	return HttpResponse("POPULATED TORZ'S BRAIN")

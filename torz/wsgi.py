@@ -13,10 +13,15 @@ from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "torz.settings")
 
-#application = get_wsgi_application()
+development_flag = True
 
-from django.core.wsgi import get_wsgi_application
-from whitenoise.django import DjangoWhiteNoise
 
-application = get_wsgi_application()
-application = DjangoWhiteNoise(application)
+if development_flag:
+	from django.core.wsgi import get_wsgi_application
+	from whitenoise.django import DjangoWhiteNoise
+
+	application = get_wsgi_application()
+	application = DjangoWhiteNoise(application)
+
+else:
+	application = get_wsgi_application()

@@ -23,6 +23,7 @@ urlpatterns = [
     url(r'^push-brain/$','torz.views.populateBrain'),
     url(r'^$','torz.views.home'),
     url(r'^ask/','torz.views.ask'),
+    url(r'^view-best-torrents/','torz.views.view_torrents'),
     url(r'^about/$','torz.views.about'),
     url(r'^best-torrents/$','torz.views.best_torrents'),
     url(r'^working/$','torz.views.working'),
