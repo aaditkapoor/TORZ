@@ -59,7 +59,7 @@ def click_counter(request):
 		if flag:
 			x = URLClicks.objects.get(url=url)
 			new = int(x.number) + 1
-			URLClicks.objects.create(url=url, number=new)
+			URLClicks.objects.update(url=url, number=new)
 			return HttpResponseRedirect(url)
 		else:
 			count+=1
@@ -103,7 +103,7 @@ def populateBrain(request):
 			x=1
 			for s in t.return_torrents():
 				print ("PUSHED TORRENT URL %d" % x)
-				BrainSystem.objects.update(query=i,knowledge=s)
+				BrainSystem.objects.create(query=i,knowledge=s)
 				x+=1
 
 	return HttpResponse("POPULATED TORZ'S BRAIN")
