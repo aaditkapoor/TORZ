@@ -8,6 +8,21 @@ from .ai.ai import AISystem
 from .responder import Responder
 import os
 
+from django.template import RequestContext
+
+
+def handler404(request):
+    response = render_to_response('404.html', {},
+                                  context_instance=RequestContext(request))
+    response.status_code = 404
+    return response
+
+def handler500(request):
+    response = render_to_response('500.html', {},
+                                  context_instance=RequestContext(request))
+    response.status_code = 500
+    return response
+
 
 def populate():
 	t = list(set([i for i in BrainSystem.objects.all()]))
