@@ -18,6 +18,8 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 
+handler404 = "torz.views.handler404"
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^push-brain/$','torz.views.populateBrain'),
