@@ -30,3 +30,10 @@ class URLClicks(models.Model):
 
 	def __unicode__(self):
 		return self.url
+
+
+class SearchClick(models.Model):
+	url = models.CharField(max_length=600)
+
+	def __unicode__(self):
+		return self.url

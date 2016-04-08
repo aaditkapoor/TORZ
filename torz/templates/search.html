@@ -123,7 +123,7 @@ swal("Good job!", "no.", "success")
   {% for i in data %}
 
   <div class="collection">
-    <a class = "collection-item" href = " {{ i }}">{{i}}</a>
+    <a class = "collection-item" href = "/saveUrl/?url={{ i }}">{{i}}</a>
   </div>
 
   {% endfor %}

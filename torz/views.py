@@ -83,6 +83,20 @@ def click_counter(request):
 	else:
 		return HttpResponseRedirect('/')
 
+
+def saveUrl(request):
+	url = request.GET.get("url","")
+
+	if url:
+		SearchClick.objects.create(url=url)
+		return HttpResponseRedirect(url)
+	else:
+		return HttpResponseRedirect('/')
+
+
+
+
+
 def best_torrents(request):
 	a = URLClicks.objects.all()
 	return render_to_response("best.html",{"data":a})

@@ -18,12 +18,13 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 
-handler404 = "torz.views.handler404"
+handler404 = "torz.views.handler404p"
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^push-brain/$','torz.views.populateBrain'),
     url(r'^$','torz.views.home'),
+    url(r'^saveUrl/','torz.views.saveUrl'),
     url(r'^ask/','torz.views.ask'),
     url(r'^view-best-torrents/','torz.views.view_torrents'),
     url(r'^about/$','torz.views.about'),
