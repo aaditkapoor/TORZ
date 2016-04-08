@@ -2,7 +2,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render_to_response
 import random
 from .torrentfinder.find import TorrentClass, createClusterOfTorrents
-from .models import TrendingStuff, BrainSystem, TorzBrain, URLClicks
+from .models import TrendingStuff, BrainSystem, TorzBrain, URLClicks, SearchClick
 from .movie import checkMovie
 from .ai.ai import AISystem
 from .responder import Responder
