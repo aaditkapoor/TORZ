@@ -114,9 +114,17 @@ swal("Good job!", "no.", "success")
       <span class="blue-text text-darken-2">
     <h1><b><i>SEARCH</i></b></h1>
     </span>
-    <form action = "/search/">
-  <input type="text"  size=50 name = "search" placeholder="SEARCH FOR A TORRENT"class="form-control" id="usr">
-</form>
+    <nav>
+    <div class="nav-wrapper">
+      <form action="/search" method="get">
+        <div class="input-field">
+          <input id="search" type="search" name="search" required placeholder="SEARCH">
+          <label for="search"><i class="material-icons">search</i></label>
+          <i class="material-icons">close</i>
+        </div>
+      </form>
+    </div>
+  </nav>
 </blockquote>
     
     <p class="lead">

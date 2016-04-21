@@ -13,7 +13,7 @@ from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "torz.settings")
 
-development_flag = True
+development_flag = False
 
 
 if development_flag:

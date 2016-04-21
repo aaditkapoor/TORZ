@@ -92,11 +92,21 @@ swal("Good job!", "no.", "success")
   </nav>
         
 <div class="container">
+
   
   <div class="text-center">
-    <form action="/ask/">
-    <h1><b><i>ASK TORZ:</i></b></h2> <input size="24" placeholder = "ASK ME ANYTHING" type="text" name="query">
-  </form>
+    <B><H2>SEARCH</h2></b>
+    <nav>
+    <div class="nav-wrapper">
+      <form action="search/">
+        <div class="input-field">
+          <input id="search" type="search" name="search" required placeholder="SEARCH">
+          <label for="search"><i class="material-icons">search</i></label>
+          <i class="material-icons">close</i>
+        </div>
+      </form>
+    </div>
+  </nav>
     <p class="lead">
 
 
@@ -104,12 +114,6 @@ swal("Good job!", "no.", "success")
   <div class="jumbotron">
     <h1><b><i><u>WELCOME!</u></i></b></h1> 
     <p>TORZ is a system that collects best torrents available on reputed sites and shows it you, it has an Artificial Intelligence System that promotes social share so that you find best and new TV SHOWS.<br><br>
-<a  onclick="torzInput()" class="waves-effect waves-light btn-large" >TEACH TORZ SOMETHING</a><br><br>
-<div class="form-group">
-	<form action = "/search/">
-  <input type="text"  name = "search" placeholder="SEARCH FOR A TORRENT"class="form-control" id="usr">
-</form>
-</div>
 </div>
 
 <div class = "jumbotron">
